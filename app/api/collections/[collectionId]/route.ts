@@ -8,7 +8,7 @@ import Product from "@/lib/models/Product";
 export const GET = async (
   req: NextRequest,
   { params }: { params: { collectionId: string } }
-) => {
+): Promise<Response> => {
   try {
     await connectToDB();
 
@@ -33,7 +33,7 @@ export const GET = async (
 export const POST = async (
   req: NextRequest,
   { params }: { params: { collectionId: string } }
-): Promise<NextResponse> => {
+) => {
   try {
     const { userId } = auth();
     if (!userId) {
@@ -67,7 +67,7 @@ export const POST = async (
 export const DELETE = async (
   req: NextRequest,
   { params }: { params: { collectionId: string } }
-) => {
+): Promise<Response> => {
   try {
     const { userId } = auth();
     if (!userId) {
