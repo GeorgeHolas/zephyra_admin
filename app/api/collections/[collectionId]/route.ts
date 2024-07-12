@@ -33,7 +33,7 @@ export const GET = async (
 export const POST = async (
   req: NextRequest,
   { params }: { params: { collectionId: string } }
-) => {
+): Promise<NextResponse> => {
   try {
     const { userId } = auth();
     if (!userId) {
@@ -43,7 +43,7 @@ export const POST = async (
 
     let collection = await Collection.findById(params.collectionId);
     if (!collection) {
-      return new NextResponse("Collection not found"), { status: 404 };
+      return new NextResponse("Collection not found", { status: 404 });
     }
 
     const { title, description, image } = await req.json();
