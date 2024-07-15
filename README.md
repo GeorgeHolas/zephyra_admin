@@ -29,14 +29,19 @@ Zephyra Admin is a powerful Next.js-based administrative dashboard designed for 
 2. Install dependencies
 3. npm install
 4. Set up environment variables
-  - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-  - CLERK_SECRET_KEY=your_clerk_secret_key
-  - MONGODB_URI=your_mongodb_connection_string
-  - NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in=/sign-in
-  - NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up=/sign-up
-  - NEXT_PUBLIC_CLERK_FALLBACK_REDIRECT_URL=/
-  - NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
-  - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+  - **NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY**=your_clerk_publishable_key
+  - **CLERK_SECRET_KEY**=your_clerk_secret_key
+  - **MONGODB_URI=**your_mongodb_connection_string
+  - **NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY**=your_stripe_publishable_key
+  - **NEXT_PUBLIC_STRIPE_SECRET_KEY**=your_stripe_secret_key
+  - **STRIPE_WEBHOOK_SECRET**=your_webhook_secret_key
+  - **NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME**=your_cloudinary_key
+  - **NEXT_PUBLIC_CLERK_SIGN_IN_URL**=/sign-in=/sign-in
+  - **NEXT_PUBLIC_CLERK_SIGN_UP_URL**=/sign-up=/sign-up
+  - **NEXT_PUBLIC_CLERK_FALLBACK_REDIRECT_URL**=/
+  - **NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL**=/
+  - **ECOMMERCE_STORE_URL**=http://localhost:3001
+  - **ADMIN_DASHBOARD_URL**=http://localhost:3000
 5. Start the development server
 6. npm run dev
 7. Open http://localhost:3000 in your browser
